@@ -7,5 +7,5 @@
 
 # Post ka format (admin mein)
 - `## Heading` heading banata hai, `- item` bullet, `> text` note box
-- `[button:Label|/download]` orange button, `[button:green:Label|https://...]` green button
+- `[button:Label|/download]` orange button, `[button:blue:Label|https://...]` green button
 - `[ad]` is jagah ad slot lagata hai
