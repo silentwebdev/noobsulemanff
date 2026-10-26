@@ -2,7 +2,7 @@
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { db } from "@/lib/db";
-import { PostModel, SettingModel } from "@/lib/models";
+import { PostModel, SettingModel, InquiryModel } from "@/lib/models";
 import { isAdmin, login, logout } from "@/lib/auth";
 const slugify = (s) => s.toLowerCase().trim().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 async function guard() { if (!(await isAdmin())) redirect("/admin"); await db(); }
@@ -16,3 +16,5 @@ export async function savePost(fd) {
 }
 export async function deletePost(fd) { await guard(); await PostModel.deleteOne({ _id: fd.get("id") }); revalidatePath("/"); redirect("/admin"); }
 export async function saveLink(fd) { await guard(); await SettingModel.findOneAndUpdate({ key: "downloadUrl" }, { value: fd.get("url") }, { upsert: true }); redirect("/admin"); }
+export async function markRead(fd) { await guard(); await InquiryModel.updateOne({ _id: fd.get("id") }, { read: true }); redirect("/admin"); }
+export async function deleteInquiry(fd) { await guard(); await InquiryModel.deleteOne({ _id: fd.get("id") }); redirect("/admin"); }

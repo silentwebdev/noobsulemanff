@@ -1,11 +1,16 @@
-# Setup
-1. `cp .env.example .env.local` aur values bharein
-2. `npm install`
-3. `npm run seed` (3 starter guides add hongi)
-4. `npm run dev`
-5. `/admin` par ja kar download link aur posts manage karein
+# noobsulemanff
 
-# Post ka format (admin mein)
-- `## Heading` heading banata hai, `- item` bullet, `> text` note box
-- `[button:Label|/download]` orange button, `[button:blue:Label|https://...]` green button
-- `[ad]` is jagah ad slot lagata hai
+## Env vars (Vercel)
+MONGODB_URI, ADMIN_PASSWORD, ADMIN_SECRET, NEXT_PUBLIC_SITE_NAME, NEXT_PUBLIC_SITE_URL (https://yourdomain.com), CONTACT_EMAIL
+
+## After deploy
+1. /admin login -> "Add starter guide" (or /api/seed?force=1 to overwrite it)
+2. Set the download link in /admin
+3. Submit https://yourdomain.com/sitemap.xml in Google Search Console
+4. Ads: Adsterra codes live in lib/ads.js
+
+## Post format
+`## Heading`, `- bullet`, `> note`, `[ad]` (alternates native/banner; or `[ad:native]`, `[ad:banner]`), `[button:Label|/download]`, `[button:blue:Label|https://...]`
+
+## Colors
+All colors are in app/globals.css under @theme.
