@@ -14,7 +14,7 @@ export default async function Admin() {
   const posts = JSON.parse(JSON.stringify(await PostModel.find().sort({ createdAt: -1 }).lean()));
   const link = (await SettingModel.findOne({ key: "downloadUrl" }).lean())?.value || "";
   return (<div className="space-y-8">
-    <div className="flex justify-between"><h1 className="text-2xl font-bold">Admin Panel</h1><form action={doLogout}><button className="text-sm underline">Logout</button></form></div>
+    <div className="flex justify-between"><h1 className="text-2xl font-bold">Admin Panel</h1><div className="flex gap-4"><a href="/api/seed" className="text-sm font-bold text-blue-700 underline">Add starter guide</a><form action={doLogout}><button className="text-sm underline">Logout</button></form></div></div>
     <form action={saveLink} className="rounded-xl bg-white shadow-lg ring-1 ring-gray-100 p-4"><h2 className="font-bold">Download Link</h2>
       <input name="url" defaultValue={link} placeholder="https://..." className={inp} /><button className={btn}>Save</button></form>
     <form action={savePost} className="rounded-xl bg-white shadow-lg ring-1 ring-gray-100 p-4"><h2 className="font-bold">Naya / Update Post</h2>
