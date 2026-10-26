@@ -17,9 +17,9 @@ export function GuideTimer({ seconds = 150, children }) {
   return (
     <Ctx.Provider value={{ left, open, setOpen }}>
       {children}
-      <div className={`fixed inset-x-0 bottom-0 z-20 px-4 py-3 text-center text-sm font-bold text-white shadow-[0_-4px_14px_rgba(0,0,0,0.25)] ${done ? "bg-good" : "bg-surface border-t border-line"}`}>
+      <div className={`fixed inset-x-0 bottom-0 z-20 px-4 py-3 text-center text-sm font-bold shadow-[0_-4px_14px_rgba(0,0,0,0.12)] ${done ? "bg-good text-white" : "bg-white text-ink border-t border-line"}`}>
         {done ? "✅ You can download now! Scroll to the end of the guide." : `⏳ Please read the guide carefully. Download unlocks in ${fmt(left)}`}
-        {!done && <div className="mx-auto mt-2 h-1.5 max-w-md overflow-hidden rounded-full bg-bg"><div className="h-full bg-accent transition-all" style={{ width: `${pct}%` }} /></div>}
+        {!done && <div className="mx-auto mt-2 h-1.5 max-w-md overflow-hidden rounded-full bg-gray-200"><div className="h-full bg-accent transition-all" style={{ width: `${pct}%` }} /></div>}
       </div>
       {open && !done && (
         <div className="fixed inset-0 z-30 flex items-center justify-center bg-black/60 p-4" onClick={() => setOpen(false)}>

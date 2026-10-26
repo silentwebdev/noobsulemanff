@@ -1,18 +1,20 @@
 @import "tailwindcss";
 @theme {
-  --color-bg: #0b0b12; --color-surface: #151520; --color-line: #2a2a3d;
-  --color-ink: #ececf3; --color-muted: #a0a0b8;
-  --color-accent: #ff6a00; --color-accent2: #ffb400; --color-good: #16a34a;
+  --color-bg: #ffffff; --color-surface: #ffffff; --color-line: #e5e7eb;
+  --color-ink: #111827; --color-muted: #6b7280;
+  --color-accent: #f97316; --color-accent2: #111827; --color-good: #16a34a;
 }
-body { background: radial-gradient(900px 400px at 50% -100px, rgba(255,106,0,.22), transparent), var(--color-bg); color: var(--color-ink); min-height: 100vh; }
-.card { background: var(--color-surface); border: 1px solid var(--color-line); border-radius: 1rem; box-shadow: 0 14px 34px -14px rgba(0,0,0,.9); }
-.btn { display: block; text-align: center; font-weight: 800; border-radius: 999px; padding: 1rem 2rem; color: #111; background: linear-gradient(90deg, var(--color-accent), var(--color-accent2)); box-shadow: 0 10px 30px -8px rgba(255,106,0,.55); transition: transform .15s; }
-.btn:hover { transform: translateY(-2px); }
-.btn-alt { color: #fff; background: linear-gradient(90deg, #2563eb, #38bdf8); box-shadow: 0 10px 30px -8px rgba(37,99,235,.55); }
-.btn-off { background: #3a3a4d; color: #9a9ab0; box-shadow: none; }
+body { background: #ffffff; color: var(--color-ink); min-height: 100vh; }
+.card { background: #fff; border: 1px solid var(--color-line); border-radius: 1rem; box-shadow: 0 8px 24px -10px rgba(17,24,39,.18); }
+.btn { display: block; text-align: center; font-weight: 800; border-radius: 999px; padding: 1rem 2rem; color: #fff; background: var(--color-accent); box-shadow: 0 8px 20px -8px rgba(249,115,22,.6); transition: transform .15s, background .15s; }
+.btn:hover { transform: translateY(-2px); background: #ea580c; }
+.btn-alt { color: #fff; background: #111827; box-shadow: 0 8px 20px -8px rgba(17,24,39,.5); }
+.btn-alt:hover { background: #1f2937; }
+.btn-off { background: #e5e7eb; color: #6b7280; box-shadow: none; }
+.btn-off:hover { background: #e5e7eb; transform: none; }
 .legal h2 { margin: 1.8rem 0 .5rem; font-size: 1.35rem; font-weight: 700; color: var(--color-accent2); }
-.legal p { margin: .7rem 0; line-height: 1.9; color: rgb(236 236 243 / .8); }
-.legal ul { margin: .7rem 0; padding-left: 1.5rem; list-style: disc; line-height: 1.9; color: rgb(236 236 243 / .8); }
-.legal a { color: var(--color-accent2); text-decoration: underline; }
+.legal p { margin: .7rem 0; line-height: 1.9; color: rgb(17 24 39 / .8); }
+.legal ul { margin: .7rem 0; padding-left: 1.5rem; list-style: disc; line-height: 1.9; color: rgb(17 24 39 / .8); }
+.legal a { color: var(--color-accent); text-decoration: underline; }
 .field { width: 100%; margin: .35rem 0 1rem; border-radius: .6rem; border: 1px solid var(--color-line); background: var(--color-bg); padding: .7rem .9rem; color: var(--color-ink); }
 .field:focus { outline: 2px solid var(--color-accent); }

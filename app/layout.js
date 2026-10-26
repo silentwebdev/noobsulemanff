@@ -15,15 +15,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en"><body>
       <SocialBar />
-      <header className="sticky top-0 z-10 border-b border-line bg-bg/90 backdrop-blur">
+      <header className="sticky top-0 z-10 border-b border-line bg-white/90 backdrop-blur">
         <nav className="mx-auto flex max-w-4xl items-center justify-between px-4 py-3">
-          <Link href="/" className="bg-gradient-to-r from-accent to-accent2 bg-clip-text text-xl font-extrabold text-transparent">🔥 {SITE.name}</Link>
-          <div className="flex gap-4 text-sm font-semibold text-muted">{links.map(([h, l]) => <Link key={h} href={h} className="hover:text-accent2">{l}</Link>)}</div>
+          <Link href="/" className="text-xl font-extrabold text-ink">🔥 {SITE.name}</Link>
+          <div className="flex gap-4 text-sm font-semibold text-muted">{links.map(([h, l]) => <Link key={h} href={h} className="hover:text-accent">{l}</Link>)}</div>
         </nav>
       </header>
       <main className="mx-auto max-w-4xl px-4 py-8">{children}</main>
-      <footer className="mt-12 border-t border-line bg-surface py-8 text-center text-xs text-muted">
-        <div className="mb-3 flex flex-wrap justify-center gap-4 font-semibold">{legal.map(([h, l]) => <Link key={h} href={h} className="hover:text-accent2">{l}</Link>)}</div>
+      <footer className="mt-12 border-t border-line bg-gray-50 py-8 text-center text-xs text-muted">
+        <div className="mb-3 flex flex-wrap justify-center gap-4 font-semibold">{legal.map(([h, l]) => <Link key={h} href={h} className="hover:text-accent">{l}</Link>)}</div>
         <p>© {new Date().getFullYear()} {SITE.name}. Not affiliated with Garena. Free Fire is a trademark of Garena.</p>
       </footer>
     </body></html>

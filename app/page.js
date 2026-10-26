@@ -7,8 +7,8 @@ async function getPosts() { try { await db(); return JSON.parse(JSON.stringify(a
 export default async function Home() {
   const posts = await getPosts();
   return (<>
-    <section className="card bg-gradient-to-br from-accent/30 via-surface to-surface p-8 text-center sm:p-12">
-      <h1 className="text-3xl font-extrabold sm:text-5xl">Free Fire <span className="bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent">Proxy Server</span></h1>
+    <section className="card p-8 text-center sm:p-12">
+      <h1 className="text-3xl font-extrabold sm:text-5xl">Free Fire <span className="text-accent">Proxy Server</span></h1>
       <p className="mx-auto mt-3 max-w-xl text-muted">What a proxy server is, how to set it up step by step, and how to fix common problems.</p>
     </section>
     <AdSlot className="my-8" />
