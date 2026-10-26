@@ -1,7 +1,9 @@
 import Link from "next/link";
 import AdSlot from "./AdSlot";
+import { GuideDownload } from "./GuideTimer";
 const cls = "my-8 block rounded-full px-8 py-4 text-center text-lg font-extrabold text-white shadow-xl transition hover:scale-[1.02]";
 function Btn({ label, url, color }) {
+  if (url === "/download") return <GuideDownload label={label} />;
   const c = `${cls} ${color === "blue" ? "bg-blue-600" : "bg-orange-500"}`;
   return url.startsWith("/") ? <Link href={url} className={c}>{label}</Link>
     : <a href={url} target="_blank" rel="noopener noreferrer nofollow" className={c}>{label}</a>;
