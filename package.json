@@ -1,0 +1,7 @@
+{
+  "name": "ff-proxy-site",
+  "private": true,
+  "scripts": { "dev": "next dev", "build": "next build", "start": "next start", "seed": "node --env-file=.env.local scripts/seed.mjs" },
+  "dependencies": { "next": "^16.2.10", "react": "^19.2.0", "react-dom": "^19.2.0", "mongoose": "^8.9.0" },
+  "devDependencies": { "tailwindcss": "^4.1.0", "@tailwindcss/postcss": "^4.1.0", "postcss": "^8.5.0" }
+}
