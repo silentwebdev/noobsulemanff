@@ -2,6 +2,7 @@
 
 ## Env vars (Vercel)
 MONGODB_URI, ADMIN_PASSWORD, ADMIN_SECRET, NEXT_PUBLIC_SITE_NAME, NEXT_PUBLIC_SITE_URL (https://yourdomain.com), CONTACT_EMAIL
+Optional: GOOGLE_SITE_VERIFICATION, BING_SITE_VERIFICATION (token from Search Console / Bing Webmaster)
 
 ## After deploy
 1. /admin login -> "Add starter guide" (or /api/seed?force=1 to overwrite it)

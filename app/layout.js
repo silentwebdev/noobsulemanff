@@ -8,6 +8,11 @@ export const metadata = {
   description: "Complete Free Fire proxy server guide: download, install, Guest ID setup, activation and troubleshooting.",
   openGraph: { siteName: SITE.name, type: "website" },
   alternates: { canonical: "./" },
+  robots: { index: true, follow: true },
+  verification: {
+    ...(process.env.GOOGLE_SITE_VERIFICATION && { google: process.env.GOOGLE_SITE_VERIFICATION }),
+    ...(process.env.BING_SITE_VERIFICATION && { other: { "msvalidate.01": process.env.BING_SITE_VERIFICATION } }),
+  },
 };
 const links = [["/", "Home"], ["/about", "About"], ["/contact", "Contact"]];
 const legal = [["/privacy-policy", "Privacy Policy"], ["/terms", "Terms"], ["/disclaimer", "Disclaimer"]];
